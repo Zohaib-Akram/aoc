@@ -8,9 +8,8 @@ with open("input.txt", "r") as file:
         leftLocations.append(int(splitResults[0]))
         rightLocations.append(int(splitResults[1]))
 
-leftLocations=sorted(leftLocations)
-rightLocations=sorted(rightLocations)
-for index in range(0,len(leftLocations)):
-    sum+=abs(leftLocations[index]-rightLocations[index])
-    
+for item in leftLocations:
+    count=rightLocations.count(item)
+    sum+=count*item
+
 print(sum)
